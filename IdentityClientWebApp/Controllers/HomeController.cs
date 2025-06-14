@@ -1,9 +1,11 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using IdentityClientWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace IdentityClientWebApp.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     public IActionResult Index()
